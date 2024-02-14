@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr> <!--- Linha --->
+                <th>Nome</th>
+                <th>endereços</th>
+                <th>Linha extra para testar o colspan</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr> 
+                <td>Doug</td> <!--- coluna--->
+                <td>doug@email.com</td>
+            </tr>
+            <tr>
+                <td>Mat</td>
+                <td>mat@mail.com</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr> 
+                <td>Resultados</td>
+                <td colspan="2">Algum resultado</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <br>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th colspan="2">Números</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr> <!--- Linha --->
+                <td>doug</td> <!--- coluna--->
+                <td>(99) 9-9999-9999</td> <!--- coluna --->
+                <td>(99) 9-9999-9999</td> <!--- coluna --->
+            </tr>
+            <tr>
+                <td>Lai</td>
+                <td>(88) 8-8888-8888</td>
+                <td>(77) 7-7777-7777</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+
+    <table border="1">
+        <tr>
+            <th>Nome</th>
+            <td>Doug</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Telefones</th>
+            <td>99 9-9999-9999</td>
+        </tr>
+        <tr>
+            <td>55 5-5555-5555</td>
+        </tr>
+    </table>
+</body>
+</html>
