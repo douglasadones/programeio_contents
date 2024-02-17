@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    
+    <form>
+        <fieldset>
+            <legend>Cadastro de usuário</legend>
+            <label for="inputTexto">Texto</label> <!--Estabelece um vínculo com o componente-->
+            Texto: <input type="text" name="texto" id="inputTexto"><br>
+            Senha: <input type="password" name="senha"><br>
+            Botão: <input type="button" name="Enviar"><br>
+            Checkbox: <br> <input type="checkbox" name="checkbox"><br> <input type="checkbox" name="checkbox"><br> <input type="checkbox" name="checkbox"><br>
+            RadioButton: <br> <input type="radio" name="radio"><br> <input type="radio" name="radio"><br>
+            <select name="opcoes" id="opcoes">
+                <option value="18 - 25 anos">18 - 25 anos</option>
+                <option value="26 - 30 anos">26 - 30 anos</option>
+                <option value="31 - 50 anos">31 - 50 anos</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Informações Extras</legend>
+            Data: <input type="date" name="data"><br>
+            Mês: <input type="month" name="mes"><br>
+            Pesquisa: <input type="search" name="busca"><br>
+            Telefone: <input type="tel" name="telefone"><br>
+            Range: <input type="range" name="range"><br>
+            Arquivos: <input type="file" name="arquivo"><br>
+            Oculto: <input type="hidden" name="oculto"><br>
+            Numérico: <input type="number" name="numeros"><br>
+            <input type="color" name="color" id="#FFFFFF">
+        </fieldset>
+    </form>
+
+</body>
+</html>

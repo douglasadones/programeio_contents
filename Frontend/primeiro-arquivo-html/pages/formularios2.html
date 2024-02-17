@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de cadastro</title>
+
+    <style>
+        div {
+            height: 50px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form style="width: 300px;">
+
+        <fieldset style="width: 300px; padding: 20px" >
+            <legend>Informações do Pet</legend>
+
+            <div>
+                <label for="NomePet">Nome:</label>
+                <input type="text" name="textoNomePet" id="NomePet">
+            </div>
+
+            <div>
+                <label for="RacaPete">Raça:</label>
+                <input type="text" name="textoRacaPet" id="RacaPete">
+            </div>
+
+            <div>
+                <label for="TipoDePet">Tipo de Pet:</label>
+                <select name="tipodepet" id="TipoDePet">
+                    <option value="Cachorro">Cachorro</option>
+                    <option value="Gato">Gato</option>
+                    <option value="Bolsonarista">Ave</option>
+                </select>
+            </div>
+
+        </fieldset>
+
+        <fieldset style="width: 300px; padding: 20px" >
+            <legend>Informações do Cliente</legend>
+
+            <div>
+                <label for="NomeCliente">Nome:</label>
+                <input type="text" name="textoNomeCliente" id="NomeCliente">
+            </div>
+
+            <div>
+                <label for="telefoneCliente">Telefone:</label>
+                <input type="tel" name="telefone" id="telefoneCliente">
+            </div>
+
+            <div>
+                <label for="emailCliente">Email:</label>
+                <input type="email" name="textoEmailCliente" id="emailCliente">
+            </div>
+
+        </fieldset>
+
+        <div style="width: 300px; padding: 20px; text-align: center; ">
+            <input type="submit" name="enviar" id="enviar" value="Enviar">
+            <input type="reset" name="limpar" id="limpar" value="Limpar">
+        </div>
+    </form>
+</body>
+</html>
