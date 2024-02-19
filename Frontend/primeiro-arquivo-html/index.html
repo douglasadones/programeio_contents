@@ -5,9 +5,10 @@
         <title>
             Minha primeira página HTML
         </title>
-        <style>
-            /*Comentário no CSS*/
-        </style>
+
+        <link rel="stylesheet" href="css/style.css">
+
+
         <script>
             // Comentário em linha no JS
             
@@ -17,15 +18,22 @@
             */
         </script>
     </head>
-    <nav>
-        <a href="index.html">Página Inicial</a>
-        <a href="pages/texto.html">Texto</a>
-        <a href="pages/links.html">Links</a>
-        <a href="pages/semantica.html">Semântica</a>
-        <a href="pages/titulos.html">Títulos</a>
-    </nav>
     <body>
-        Olá, Mundo! Hello World!
+        <nav>
+            <a href="index.html">Página Inicial</a>
+            <a href="pages/texto.html">Texto</a>
+            <a href="pages/links.html">Links</a>
+            <a href="pages/semantica.html">Semântica</a>
+            <a href="pages/titulos.html">Títulos</a>
+        </nav>
+
+        <p>Olá, Mundo! <br> Hello World!</p>
+
+        <div style="font-size: 40px;">
+            <p class="p32">Olá, Mundo1!</p>
+            <p class="p2em">Olá, Mundo2!</p> <!--fica 40px pois esta possiu 2 vezes o tamanho padrão-->
+            <p class="p2rem">Olá, Mundo3!</p> <!--usando root para evitar a duplicação-->
+        </div>
     </body>
     <!-- Comentário no HTML -->
 </html>

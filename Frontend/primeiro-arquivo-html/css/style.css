@@ -1,0 +1,74 @@
+/* Criando variáveis */
+:root {  
+    --azul-escuro: #9195F6;
+    --azul-claro: #B7C9F2;
+    --amarelo: #F9F07A;
+    --rosa: #FB88B4;
+}
+
+body {
+    background: var(--amarelo);
+    color: var(--azul-escuro)
+}
+
+p {
+    /* color: red;
+    color: rgb(255, 0, 0);
+    color: rgba(255, 0, 0, 0.5);
+    color: #ff0000; */
+    font-size: x-large;
+    border: 10px dotted #ccc;
+    padding: 10px;
+    margin-left: 50px;
+    /* margin:50px 50px 50px 50px; */
+     /* margin:0px 50pxx;  aqui fica simétrico: 0 50 0 50*/
+    width: 330px;
+}
+
+a {
+    color: var(--azul-escuro);
+    /* color: rgba(57, 187, 223, 0.855); */
+
+    
+    /* Aqui, só afetamos a tag "a" de dentro da "nav" */
+    nav a { 
+        padding: 0px 20px;
+    }
+
+    /* Resetando (limpando o estilo padrão) de um componente 
+        Para limpar tudo da sua página, basta adicionar o seletor *
+        assim: 
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                text-decoration: none;
+            }
+
+        ou modifica um por um: margin, padding, box-sizing, text-decoration:
+            body, head, nav {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                    text-decoration: none;
+                }
+    */
+}
+
+.p32 {
+    font-size: 32px;
+}
+
+.p2em {
+    font-size: 2em;
+}
+
+/* Aqui, ele não duplica, pois admite a fonte raiz de todo o documento html "root". */
+.p2rem {
+    font-size: 2rem; 
+}
+
+/* Shorthand:
+    #000000 = #000
+    #AABBCC = #ABC    
+*/
