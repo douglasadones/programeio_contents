@@ -22,8 +22,25 @@ body {
     font-weight: bold;
 }
 
+.hr {
+    align-items: center;
+    border-bottom: 1px solid #dadde1;
+    display: flex;
+    margin: 20px 16px;
+    text-align: center;
+}
+
+.sm-text {
+    font-size: 14px;
+    line-height: normal;
+}
+
 .mb-20 {
     margin-bottom: 20px;
+}
+
+.mt-20 {
+    margin-top: 20px;
 }
 
 .container {
@@ -37,7 +54,7 @@ body {
     height: 100vh; 
     justify-content: center;
     padding-left: 150px;
-    padding-right: 50px;
+    padding-right: 40px;
 }
 
 .right-container {
@@ -45,14 +62,17 @@ body {
     flex-direction: column;
     height: 100vh;
     justify-content: center;
-    padding-left: 50px;
-    padding-right: 150px;
+    padding-left: 40px;
+    padding-right: 160px;
 }
 
 .box-login {
+    width: 400px;
+    padding: 20px;
     background-color: #fff;
     display: flex;
     flex-direction: column;
+    border-radius: 10px;
 }
 
 .form-login {
@@ -63,7 +83,59 @@ body {
 .input-login {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    height: 50px;
+    justify-content: space-between;
 }
 
+.input-login input {
+    font-size: 16px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: 1px solid #dddfe2;
+    color: #1d2129;
+}
+
+.green-btn {
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #42b72a; 
+    border: none;
+    border-radius: 5px;
+}
+
+
+.blue-btn {
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #1f5de2; 
+    border: none;
+    border-radius: 5px;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+}
+
+.center {
+    justify-content: center;
+    text-align: center;
+}
+
+.button-flex {
+    align-self: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.black-link {
+    color: #1c1e21;
+}
