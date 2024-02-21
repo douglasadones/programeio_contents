@@ -1,55 +1,140 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Conhecendo Bootstrap</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <main>
-            <header>
-                <h1>Testando algumas funcionalidades do Bootstrap!</h1>
-            </header>
+<html lang="pt-br">
 
-            <div class="lorem">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, expedita suscipit quaerat ex magnam consequuntur asperiores qui ipsum et ea exercitationem, corrupti necessitatibus optio laboriosam itaque eveniet vitae, iusto in. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi delectus aut error omnis, soluta illum beatae, neque porro animi iure officia cupiditate esse corrupti ut consequuntur repellat laudantium nesciunt provident!</p>
-            </div>
-            <h2>Verificando os Parágrafos</h2>
-            <div class="lorem">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, expedita suscipit quaerat ex magnam consequuntur asperiores qui ipsum et ea exercitationem, corrupti necessitatibus optio laboriosam itaque eveniet vitae, iusto in. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa doloremque rerum architecto quidem nostrum ut eum aspernatur perferendis magni porro aperiam labore ex officiis impedit voluptatem maiores soluta, eius est.</p>
-            </div>
-            <h2>Relembrando sobre tabela</h2>
-            <table border="1">
-                <tr>
-                    <th>Horários</th>
-                    <th>blabla</th>
-                    <th>blablabla</th>
-                </tr>
-                <tr>
-                    <th>blo</th>
-                    <th>blo</th>
-                    <th>blo</th>
-                </tr>
-                <tr>
-                    <th>ble</th>
-                    <th colspan="2">blebleblelbelbelbe</th>
-                </tr>
-                <tr>
-                    <th rowspan="2">blobloblo</th>
-                    <th rowspan="1">blobloblo</th>
-                    <th rowspan="2">sd</th>
-                </tr>
-                <tr>
-                    <th>asdasdsad</th>
-                </tr>
-            </table>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conhecendo Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
 
-            <h2>Sobre formulários</h2>
-            <form action="">
-                <fieldset></fieldset>
-            </form>
-        </main>
+<body style="background-color: #e2d8d8;">
+    <main>
+        <header>
+            <h1>Testando algumas funcionalidades do Bootstrap!</h1>
+        </header>
 
-    </body>
+        <div class="dropdown" data-bs-theme="dark">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonDark"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Dark dropdown
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonDark">
+                <li><a class="dropdown-item active" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+        </div>
+
+        <div class="lorem">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, expedita suscipit quaerat ex magnam
+                consequuntur asperiores qui ipsum et ea exercitationem, corrupti necessitatibus optio laboriosam itaque
+                eveniet vitae, iusto in. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi delectus aut
+                error omnis, soluta illum beatae, neque porro animi iure officia cupiditate esse corrupti ut
+                consequuntur repellat laudantium nesciunt provident!</p>
+        </div>
+        <h2>Verificando os Parágrafos</h2>
+        <div class="lorem">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, expedita suscipit quaerat ex magnam
+                consequuntur asperiores qui ipsum et ea exercitationem, corrupti necessitatibus optio laboriosam itaque
+                eveniet vitae, iusto in. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa doloremque rerum
+                architecto quidem nostrum ut eum aspernatur perferendis magni porro aperiam labore ex officiis impedit
+                voluptatem maiores soluta, eius est.</p>
+        </div>
+        <h2>Relembrando sobre tabela</h2>
+        <table class="table table-success table-striped">
+            <tr>
+                <th>Horários</th>
+                <th>blabla</th>
+                <th>blablabla</th>
+            </tr>
+            <tr>
+                <th>blo</th>
+                <th>blo</th>
+                <th>blo</th>
+            </tr>
+            <tr>
+                <th>ble</th>
+                <th colspan="2">blebleblelbelbelbe</th>
+            </tr>
+            <tr>
+                <th rowspan="2">blobloblo</th>
+                <th rowspan="1">blobloblo</th>
+                <th rowspan="2">sd</th>
+            </tr>
+            <tr>
+                <th>asdasdsad</th>
+            </tr>
+        </table>
+
+        <h2>Sobre formulários</h2>
+        <form class="row g-3 needs-validation">
+                <legend>Só para Teste</legend>
+
+                <div class="col-md-4">
+                    <label for="teste">teste</label>
+                    <input type="text" nome="texto1" id="teste">
+                </div>
+
+                <div class="col-md-4">
+                    <label for="teste2">teste2</label>
+                    <input type="text" name="texto2" id="teste2">
+                </div>
+
+                <div class="col-md-4">
+                    <label for="data1">Data</label>
+                    <input type="date" name="texto2" id="data1">
+                </div>
+
+                <div class="col-md-4">
+
+                    <label for="teste4">Opções:</label>
+
+                    <select class="form-select" name="teste4" id="teste4">
+
+                        <option value="teste1">teste1</option>
+                        <option value="teste2">teste2</option>
+                        <option value="teste3">teste3</option>
+                        <option value="teste4">teste4</option>
+
+                    </select>
+
+                </div>
+
+                <div class="col-md-4">
+                    <label >Enviar</label>
+                    <input class="btn btn-success" type="submit" name="resetar" value="Enviar">
+                </div>
+
+
+                <div class="col-md-4">
+                    <label>reset</label>
+                    <input class="btn btn-danger" type="reset" name="resetar" value="Limpar">
+                </div>
+
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label" for="invalidCheck">
+                            Aceito os termos e condições
+                        </label>
+                        <div class="invalid-feedback">
+                            You must agree before submitting.
+                        </div>
+                    </div>
+                </div>
+        </form>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>

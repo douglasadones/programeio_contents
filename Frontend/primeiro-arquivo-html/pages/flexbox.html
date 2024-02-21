@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Flexbox - Conceitos</title>
+
+    <style>
+        :root {
+            --azul-escuro: #9195F6;
+            --azul-claro: #B7C9F2;
+            --amarelo: #F9F07A;
+            --rosa: #FB88B4;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            
+            justify-content: space-around;
+            /* 
+            align-items: center;  Verticalmente centralizado
+            */
+            background-color: white;
+            width: 400px;
+            height: 400px;
+            flex-wrap: wrap; /*Impede que o conteúdo interno "vaze"*/
+            /*
+            flex-wrap: wrap-reverse; faz a quebra para cima*/
+        }
+
+        .short {
+            align-self: flex-start;
+        }
+
+        div {
+            margin: 10px;
+            background-color: rgb(73, 73, 73);
+            color: #fff;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div class="short">3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+</body>
+
+</html>
