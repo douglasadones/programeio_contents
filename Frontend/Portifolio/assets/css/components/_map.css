@@ -1,0 +1,16 @@
+.map,
+.map iframe {
+    width: 100%;
+}
+
+.map {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50%;
+}
+
+.map iframe {
+    height: 100%;
+    border: 0;
+}

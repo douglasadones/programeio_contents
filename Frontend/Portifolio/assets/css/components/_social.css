@@ -1,0 +1,23 @@
+.socials {
+    display: flex;
+    max-width: 210px;
+    margin-left: auto;
+}
+.socials .social-item {
+    display: block;
+    margin: 0 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    text-align: center;
+    line-height: 42px;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.socials .social-item:hover {
+    background: var(--primary);
+    color: var(--color-white);
+}

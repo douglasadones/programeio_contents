@@ -1,0 +1,18 @@
+.btn {
+    background: var(--primary);
+    padding: 20px 40px;
+    border: solid 2px var(--primary);
+    height: 40px;
+    max-width: 286px;
+    color: var(--color-white);
+    font-size: 14px;
+    font-weight: var(--font-bold);
+    border-radius: 50px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.btn:hover {
+    background: var(--color-white);
+    color: var(--primary);
+}

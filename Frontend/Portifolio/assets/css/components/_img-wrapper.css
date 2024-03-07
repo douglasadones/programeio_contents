@@ -1,0 +1,83 @@
+.img-wrapper-container {
+    display: flex;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.img-wrapper, .img-wrapper img {
+    position: relative;
+}
+
+.img-wrapper {
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    display: block;
+}
+
+.img-wrapper img {
+    width: 100%;
+    z-index: 8 ;
+}
+
+.img-wrapper .overlay, 
+.img-wrapper .overlay .overlay-infos {
+    position: absolute;
+}
+
+/*Detalhe: Quando setamos para position: Absolute, o item desaparece pois, sem informar o top/left/bottom ou right ele ficará com width: 0 em algum lugar do container. Para que ele apareça, precisamos especificar alguns dos atriutos mencionados acima. Nesse caso, queremos que ele realmente desapareça por enquanto. */
+.img-wrapper .overlay {
+    background: var(--overlay);
+    left: 0;
+    bottom: 100%;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s;
+}
+
+.img-wrapper .overlay .overlay-infos {
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s;
+    transition-delay: 0.2s;
+    color: var(--color-white);
+}
+
+.img-wrapper .overlay .overlay-infos h5 {
+    margin-bottom: 15px;
+}
+
+.img-wrapper .overlay .overlay-infos a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: solid 2px var(--color-white);
+    line-height: 35px;
+    text-align: center;
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+.img-wrapper .overlay .overlay-infos a:hover {
+    background: var(--color-white);
+    color: var(--primary);
+    
+}
+
+.img-wrapper:hover .overlay,
+.img-wrapper:active .overlay {
+    bottom: 0;
+    visibility: visible;
+    opacity: 1;
+}
+
+.img-wrapper:hover .overlay .overlay-infos,
+.img-wrapper:active .overlay .overlay-infos {
+    top: 50%;
+}

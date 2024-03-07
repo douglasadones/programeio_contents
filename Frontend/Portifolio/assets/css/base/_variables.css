@@ -1,0 +1,16 @@
+:root {
+    --primary: #8257e5;
+    --overlay: #8257e578;
+    --color-dark: #000;
+    --color-white: #fff;
+    --color-gray: #ccc;
+    --color-gray-light: #dee2e6;
+    --color-gray-medium: #eaf0fc;
+    --color-shadow: rgba(173, 181, 189, 0.4);
+
+    --font-thin: 100;
+    --font-light: 300;
+    --font-medium: 500;
+    --font-bold: 700;
+    --font-black: 900;
+}

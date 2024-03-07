@@ -1,0 +1,40 @@
+.card-container, .card {
+    display: flex;
+    margin: 0 auto;
+}
+
+.card-container {
+    max-width: 1000px;
+    text-align: center;
+    gap: 2rem;
+    margin-top: 50px;
+}
+
+.card {
+    justify-content: center;
+    width: 250px;
+    background: var(--color-white);
+    margin-bottom: 15px;
+    box-shadow: 2px 3px 10px var(--color-gray);
+    border-radius: 12px;
+    transition: all 0.3s;
+}
+
+.card:hover {
+    background: var(--primary);
+    color: var(--color-white);
+}
+
+.card-body {
+    padding: 55px 0;
+}
+
+.card-body i {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.card-body h5 {
+    font-size: 20px;
+    font-weight: var(--font-black);
+}
