@@ -1,5 +1,6 @@
 public class App {
     public static void main(String[] args) throws Exception {
+        
         Televisao tv1 = new Televisao();
         ControleRemoto controle = new ControleRemoto(tv1);
 
@@ -16,7 +17,8 @@ public class App {
             controle.diminuirVolume();
         } while (tv1.getVolume() !=0);
 
-        // tento diminuir mais o volume
+
+        // tenta diminuir mais o volume
         controle.diminuirVolume();
 
         controle.informacoesDaTv();

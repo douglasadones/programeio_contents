@@ -2,7 +2,7 @@ import javax.swing.JOptionPane;
 
 public class ControleRemoto {
     Televisao tv;
-    ControleRemoto(Televisao tv){
+    ControleRemoto(Televisao tv) {
         this.tv = tv;
     }
 
@@ -43,8 +43,11 @@ public class ControleRemoto {
     }
 
     public void informacoesDaTv() {
-        String estatos = (this.tv.getStatusTv() == true )? "Ligada" : "Desligada";
-        String informacoes = "Status da Tv: "+estatos+"\nCanal atual: "+this.tv.getCanal()+"\nVolume atual: "+this.tv.getVolume();
-        JOptionPane.showMessageDialog(null,informacoes);
+        
+        String status = (this.tv.getStatusTv() == true) ? "Ligada" : "Desligada";
+
+        String informacoes = "Status da Tv: "+ status+"\nCanal atual: "+this.tv.getCanal()+"\nVolume atual: "+this.tv.getVolume();
+
+        JOptionPane.showMessageDialog(null, informacoes);
     }
 }

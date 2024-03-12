@@ -1,18 +1,18 @@
 public class Televisao {
-    private int getVolume = 50;
+    private int volume = 50;
     private int canal = 10;
     private boolean ligada = false;
 
     public int getCanal() {
         return this.canal;
-    };
+    }
 
     public int getVolume() {
-        return this.getVolume;
+        return this.volume;
     }
 
     public void setVolume(int novoVolume) {
-        this.getVolume = novoVolume;
+        this.volume = novoVolume;
     }
 
     public void setCanal(int novoCanal) {
