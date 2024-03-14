@@ -1,7 +1,11 @@
 package cinema;
 public class Filme {
     private String nome;
-    private int preco;
+    private double preco;
+
+    public Filme(String nome){
+        this.nome = nome;
+    }
     
     public String getNome() {
         return nome;
@@ -11,11 +15,11 @@ public class Filme {
         this.nome = nome;
     }
 
-    public int getPreco() {
+    public double getPreco() {
         return this.preco;
     }
 
-    public void setPreco(int novoPreco) {
+    public void setPreco(double novoPreco) {
         this.preco = novoPreco;
     }
 }
