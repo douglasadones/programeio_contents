@@ -3,13 +3,10 @@
 }
 
 form {
-    opacity: 50%;
+    opacity: 100%;
 }
 
 form ::placeholder {
     font-size: large;
 }
 
-form .lupa {
-    color: black;
-}
