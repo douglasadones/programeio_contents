@@ -1,3 +1,15 @@
 :root {
     --orange: #FFBA3A;
 }
+
+form {
+    opacity: 50%;
+}
+
+form ::placeholder {
+    font-size: large;
+}
+
+form .lupa {
+    color: black;
+}
