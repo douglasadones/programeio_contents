@@ -10,8 +10,11 @@ public class Atividade implements Serializable {
     
     @Id
     private Long id;
+    @Column(length = 200, nullable = true) // Opcional
     private String nome;
+    @Column(length = 500, nullable = true)
     private String descricao;
+    @Temporal(TemporalType.TIMESTAMP) // data e hora
     private Date dataAtividade;
     
     public Atividade() {
