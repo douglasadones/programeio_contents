@@ -20,7 +20,8 @@ public class Atividade implements Serializable {
     public Atividade() {
     }
 
-    public Atividade(String nome, String descricao, Date dataAtividade) {
+    public Atividade(Long id, String nome, String descricao, Date dataAtividade) {
+        this.id = id;
         this.nome = nome;
         this.descricao = descricao;
         this.dataAtividade = dataAtividade;
