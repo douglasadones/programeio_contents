@@ -9,6 +9,8 @@ import javax.persistence.*;
 public class Atividade implements Serializable {
     
     @Id
+    @SequenceGenerator(name = "seq_atividade", sequenceName = "seq_atividade", initialValue = 1)
+    @GeneratedValue(generator = "seq_atividade", strategy = GenerationType.SEQUENCE)
     private Long id;
     @Column(length = 200, nullable = true) // Opcional
     private String nome;
@@ -19,6 +21,13 @@ public class Atividade implements Serializable {
     
     public Atividade() {
     }
+    
+    public Atividade(String nome, String descricao, Date dataAtividade) {
+        this.nome = nome;
+        this.descricao = descricao;
+        this.dataAtividade = dataAtividade;
+    }
+
 
     public Atividade(Long id, String nome, String descricao, Date dataAtividade) {
         this.id = id;
