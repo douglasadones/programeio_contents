@@ -7,7 +7,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "tab_atividade")
 public class Atividade implements Serializable {
-    
+
     @Id
     @SequenceGenerator(name = "seq_atividade", sequenceName = "seq_atividade", initialValue = 1)
     @GeneratedValue(generator = "seq_atividade", strategy = GenerationType.SEQUENCE)
@@ -18,16 +18,15 @@ public class Atividade implements Serializable {
     private String descricao;
     @Temporal(TemporalType.TIMESTAMP) // data e hora
     private Date dataAtividade;
-    
+
     public Atividade() {
     }
-    
+
     public Atividade(String nome, String descricao, Date dataAtividade) {
         this.nome = nome;
         this.descricao = descricao;
         this.dataAtividade = dataAtividade;
     }
-
 
     public Atividade(Long id, String nome, String descricao, Date dataAtividade) {
         this.id = id;
@@ -81,33 +80,50 @@ public class Atividade implements Serializable {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj)
+        if (this == obj) {
             return true;
-        if (obj == null)
+        }
+        if (obj == null) {
             return false;
-        if (getClass() != obj.getClass())
+        }
+        if (getClass() != obj.getClass()) {
             return false;
+        }
         Atividade other = (Atividade) obj;
         if (id == null) {
-            if (other.id != null)
+            if (other.id != null) {
                 return false;
-        } else if (!id.equals(other.id))
+            }
+        } else if (!id.equals(other.id)) {
             return false;
+        }
         if (nome == null) {
-            if (other.nome != null)
+            if (other.nome != null) {
                 return false;
-        } else if (!nome.equals(other.nome))
+            }
+        } else if (!nome.equals(other.nome)) {
             return false;
+        }
         if (descricao == null) {
-            if (other.descricao != null)
+            if (other.descricao != null) {
                 return false;
-        } else if (!descricao.equals(other.descricao))
+            }
+        } else if (!descricao.equals(other.descricao)) {
             return false;
+        }
         if (dataAtividade == null) {
-            if (other.dataAtividade != null)
+            if (other.dataAtividade != null) {
                 return false;
-        } else if (!dataAtividade.equals(other.dataAtividade))
+            }
+        } else if (!dataAtividade.equals(other.dataAtividade)) {
             return false;
+        }
         return true;
     }
+
+    @Override
+    public String toString() {
+        return "Atividade{" + "id=" + id + ", nome=" + nome + ", descricao=" + descricao + ", dataAtividade=" + dataAtividade + '}';
+    }
+
 }
