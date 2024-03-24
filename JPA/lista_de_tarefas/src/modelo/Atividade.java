@@ -123,7 +123,6 @@ public class Atividade implements Serializable {
 
     @Override
     public String toString() {
-        return "Atividade{" + "id=" + id + ", nome=" + nome + ", descricao=" + descricao + ", dataAtividade=" + dataAtividade + '}';
+        return "nome=" + nome + ", descricao= " + descricao + ", dataAtividade=" + dataAtividade;
     }
-
 }

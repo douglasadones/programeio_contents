@@ -21,7 +21,7 @@ public class Pessoa implements Serializable {
     @OneToOne(cascade = CascadeType.ALL)
     private Endereco endereco;
     
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Atividade> atividades;
 
     public Pessoa() {
@@ -107,7 +107,7 @@ public class Pessoa implements Serializable {
 
     @Override
     public String toString() {
-        return "Pessoa{" + "id=" + id + ", nome=" + nome + ", cpf=" + cpf + ", endereco=" + endereco + ", atividades=" + atividades + '}';
+        return "nome= " + nome + ", cpf= " + cpf;
     }
     
     
