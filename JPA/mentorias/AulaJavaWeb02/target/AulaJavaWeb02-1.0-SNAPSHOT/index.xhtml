@@ -8,18 +8,17 @@
     </h:head>
     <h:body>
         <h:form>
-            <p:panel header="Minha Agenda" toggleable="true" closable="true" toggleSpeed="500"
-                     closeSpeed="500">
-
+            <p:growl/>
+            <p:fieldset legend="Minha Agenda" toggleable="true">
+                <p:commandButton value="Pesquisar" style="float: right"/>
                 <h4>Dados Gerais</h4>
                 <hr/>
-
                 <h:panelGrid columns="1">
                     <p:outputLabel value="Nome: "/>
                     <p:inputText value="#{managerAgenda.agenda.nome}"/>
                     <p:outputLabel value="Descrição: "/>
                     <p:inputTextarea value="#{managerAgenda.agenda.descricao}" />
-<!--                    <h1>RES = #\{managerAgenda.resultado}</h1>-->
+                    <!--<h1>RES = #\{managerAgenda.resultado}</h1>-->
                 </h:panelGrid>
                 <h4>Contatos</h4>
                 <hr/>
@@ -32,26 +31,28 @@
                         <p:commandButton value="Adicionar" update="@form" actionListener="#{managerAgenda.adicionarContato()}"/>
                     </h:panelGrid>
                 </center>
-                
-                <p:dataTable id="dataTable" var="contato" value="#{managerAgenda.contatos}" rows="3"
-                     paginator="true">
+
+                <p:dataTable id="dataTable" var="contato" value="#{managerAgenda.agenda.contatos}" rows="3"
+                             paginator="true">
                     <p:column headerText="Ações">
                         <!--em #\{managerAgenda.removerContato(contato)}, estamos nos referindo ao var="contato"-->
-                        <p:commandButton value="Excluir" actionListener="#{managerAgenda.removerContato(contato)}" update="dataTable"/>
+                        <p:commandButton value="Excluir" actionListener="#{managerAgenda.removerContato(contato)}" update="dataTable" process="@this"/>
                     </p:column>
                     <p:column headerText="Nome">
                         <!--'value="#\{contato.nome}" está referenciando o var="contato" logo acima--> 
                         <p:outputLabel value="#{contato.nome}"/>
                     </p:column>
-                    
-                    
+
                     <p:column headerText="Telefone">
                         <p:outputLabel value="#{contato.numero}" />
                     </p:column>
-                    
+
                 </p:dataTable>
-                
-            </p:panel>
+                <br/>
+                <center>
+                    <p:commandButton value="SALVAR" icon="pi pi-save" actionListener="#{managerAgenda.visualizar()}" process="@this" update="@form"/>
+                </center>
+            </p:fieldset>
         </h:form>
     </h:body>
 </html>

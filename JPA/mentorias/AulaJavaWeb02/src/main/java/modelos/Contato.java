@@ -68,5 +68,10 @@ public class Contato {
         }
         return Objects.equals(this.descricao, other.descricao);
     }
+
+    @Override
+    public String toString() {
+        return "Contato{" + "nome=" + nome + ", numero=" + numero + ", descricao=" + descricao + '}';
+    }
     
 }

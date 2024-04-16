@@ -12,7 +12,6 @@ public class Agenda {
     private String nome;
     private String descricao;
     private List<Contato> contatos;
-
     public Agenda() {
     }
     
