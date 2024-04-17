@@ -31,8 +31,14 @@ public class ServicoGenerico<T> {
         
     }
     
+    public T find(Long id) {
+        T objeto = getEntityManager().find(entidade, id);
+        getEntityManager().refresh(objeto);
+        return objeto; 
+    }
+    
     public List<T> findAll() {
-        return entityManager.createQuery("SELECT e FROM" + entidade.getName() + " e").getResultList();
+        return entityManager.createQuery("SELECT e FROM " + entidade.getSimpleName()+ " e WHERE e.ativo = true").getResultList();
     }
 
     public EntityManager getEntityManager() {

@@ -8,18 +8,13 @@
     </h:head>
     <h:body>
         <h:form>
-            <p:growl/>
-            <p:panel header="Cadastro de Cliente">
-                <h:panelGrid columns="1">
-                    <p:outputLabel value="ID: "/>
-                    <p:inputText value="#{managerCliente.cliente.id}"/>
-                    <p:outputLabel value="Nome: "/>
-                    <p:inputText value="#{managerCliente.cliente.nome}"/>
-                    <p:outputLabel value="Telefone: "/>
-                    <p:inputMask mask="(99) 999999-9999" value="#{managerCliente.cliente.telefone}"/>
-                    <p:commandButton value="Salvar" actionListener="#{managerCliente.salvar()}" update="@form"/>
-                </h:panelGrid>
-            </p:panel>
+            <p:menubar>
+                <p:submenu label="Clientes" icon="pi pi-users">
+                    <p:menuitem value="Cadastrar" icon="pi pi-plus-circle" url="cliente.xhtml"/>
+                    <p:divider/>
+                    <p:menuitem value="Pesquisar" icon="pi pi-search" url="pesquisarCliente.xhtml"/>
+                </p:submenu>
+            </p:menubar>
         </h:form>
     </h:body>
 </html>

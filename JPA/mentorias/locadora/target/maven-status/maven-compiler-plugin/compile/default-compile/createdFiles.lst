@@ -5,7 +5,7 @@ com\mycompany\locadora\JakartaRestConfiguration.class
 generico\ServicoGenerico.class
 modelo\Cliente.class
 com\mycompany\locadora\resources\JakartaEE8Resource.class
-modelo\Managercliente.class
+servicos\FilmeServico.class
 generico\EntidadeGenerica.class
 modelo\Filme.class
 servicos\ClienteServico.class

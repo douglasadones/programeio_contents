@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Locadora</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:growl/>
+            <p:panel header="Pesquisar Cliente">
+                <h:panelGrid columns="1">
+                    <p:outputLabel value="Nome: "/>
+                    <p:inputText value="#{managerCliente.cliente.nome}"/>
+                    <p:outputLabel value="Telefone: "/>
+                    <p:inputMask mask="(99)99999-9999" value="#{managerCliente.cliente.telefone}"/>
+                    <p:commandButton value="Pesquisar" icon="pi pi-search" actionListener="#{managerCliente.pesquisar()}" update="@form"/>
+                    <p:dataTable rows="5" paginator="true" value="#{managerCliente.clientes}" var="cliente">
+                        <p:column headerText="Ações" width="50">
+                            <p:button  icon="pi pi-pencil" href="cliente.xhtml?editar=#{cliente.id}"/>
+                        </p:column>
+                        <p:column headerText="Nome">
+                            <p:outputLabel value="#{cliente.nome}"/>
+                        </p:column>
+                        <p:column headerText="Telefone">
+                            <p:outputLabel value="#{cliente.telefone}"/>
+                        </p:column>
+                    </p:dataTable>
+                </h:panelGrid>
+            </p:panel>
+        </h:form>
+    </h:body>
+</html>
+
