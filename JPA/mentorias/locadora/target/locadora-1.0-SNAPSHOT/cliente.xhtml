@@ -14,7 +14,7 @@
                     <p:outputLabel value="Nome: "/>
                     <p:inputText value="#{managerCliente.cliente.nome}"/>
                     <p:outputLabel value="Telefone: "/>
-                    <p:inputMask mask="(99) 999999-9999" value="#{managerCliente.cliente.telefone}"/>
+                    <p:inputMask mask="(99)99999-9999" value="#{managerCliente.cliente.telefone}"/>
                     <p:commandButton value="Salvar" actionListener="#{managerCliente.salvar()}" update="@form"/>
                 </h:panelGrid>
             </p:panel>
