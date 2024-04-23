@@ -1,0 +1,14 @@
+models\PurchaseItems.class
+models\Sale.class
+models\SaleItems.class
+models\Company.class
+models\Client.class
+models\Purchase.class
+models\Address.class
+com\mycompany\inventory\control\resources\JakartaEE10Resource.class
+generics\GenericEntity.class
+generics\GenericService.class
+com\mycompany\inventory\control\JakartaRestConfiguration.class
+models\Product.class
+models\Contact.class
+models\Users.class
