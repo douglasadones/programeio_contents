@@ -16,7 +16,7 @@ import java.util.Objects;
  *
  * @author dougl
  */
-
+//
 @Entity
 @Table(name = "client")
 public class Client extends GenericEntity {
@@ -28,7 +28,6 @@ public class Client extends GenericEntity {
     @Column(nullable = true, length = 70)
     private String name;
     
-    @Column(nullable = true)
     @OneToOne(cascade = CascadeType.ALL)
     private Contact contact;
 

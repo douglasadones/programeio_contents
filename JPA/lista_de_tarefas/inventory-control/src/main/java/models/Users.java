@@ -2,7 +2,6 @@ package models;
 
 import generics.GenericEntity;
 import jakarta.persistence.CascadeType;
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -22,26 +21,21 @@ import java.util.Objects;
 @Entity
 @Table(name = "Users")
 public class Users extends GenericEntity {
-    
+
     @Id
     @SequenceGenerator(sequenceName = "seq_user", name = "seq_user")
     @GeneratedValue(generator = "seq_user", strategy = GenerationType.SEQUENCE)
     private Long idUser;
-    
-    @Column(nullable = false)
+
     private String name;
-    
-    @Column(nullable = false)
+
     private String login;
-    
-    @Column(nullable = false)
+
     private String password;
-    
-    @Column(nullable = false)
+
     @OneToMany(cascade = CascadeType.ALL)
     private List<Company> companyList;
-    
-    @Column(nullable = false)
+
     @OneToOne(cascade = CascadeType.ALL)
     private Contact contact;
 
@@ -137,5 +131,5 @@ public class Users extends GenericEntity {
         }
         return Objects.equals(this.contact, other.contact);
     }
-    
+
 }

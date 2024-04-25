@@ -19,7 +19,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "saleItems")
-public class SaleItems extends GenericEntity {
+public class SaleItems extends GenericEntity {  
     
     @Id
     @SequenceGenerator(sequenceName = "seq_saleItems", name = "seq_saleItems")

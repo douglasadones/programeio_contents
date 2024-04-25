@@ -3,11 +3,12 @@ package models;
 import generics.GenericEntity;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
-import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -18,12 +19,14 @@ import java.util.Objects;
 @Entity
 @Table(name = "purchaseItems")
 public class PurchaseItems extends GenericEntity {
+    
     @Id
     @SequenceGenerator(sequenceName = "seq_purchaseItems", name = "seq_purchaseItems")
+    @GeneratedValue(generator = "seq_purchaseItems")
     private Long idPurchaseItems;
     
     @OneToMany(cascade = CascadeType.ALL) 
-    private ArrayList<Product> products;
+    private List<Product> products;
 
     public PurchaseItems() {
     }
@@ -36,11 +39,11 @@ public class PurchaseItems extends GenericEntity {
         this.idPurchaseItems = idPurchaseItems;
     }
 
-    public ArrayList<Product> getProducts() {
+    public List<Product> getProducts() {
         return products;
     }
 
-    public void setProducts(ArrayList<Product> products) {
+    public void setProducts(List<Product> products) {
         this.products = products;
     }
 

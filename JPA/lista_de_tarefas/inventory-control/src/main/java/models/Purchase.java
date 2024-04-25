@@ -2,7 +2,6 @@ package models;
 
 import generics.GenericEntity;
 import jakarta.persistence.CascadeType;
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,22 +17,19 @@ import java.util.Objects;
  *
  * @author dougl
  */
-
 @Entity
 @Table(name = "purchase")
 public class Purchase extends GenericEntity {
+
     @Id
     @SequenceGenerator(sequenceName = "seq_purchase", name = "seq_purchase")
     @GeneratedValue(generator = "seq_purchase", strategy = GenerationType.SEQUENCE)
     private Long Idpurchase;
-   
-    @Column(nullable = true)
+
     private String description;
-            
-    @Column(nullable = false)
+
     private BigDecimal totalPrice;
-    
-    @Column(nullable = false)
+
     @OneToMany(cascade = CascadeType.ALL)
     private List<PurchaseItems> products;
 
@@ -105,7 +101,5 @@ public class Purchase extends GenericEntity {
         }
         return Objects.equals(this.products, other.products);
     }
-    
-    
-   
+
 }

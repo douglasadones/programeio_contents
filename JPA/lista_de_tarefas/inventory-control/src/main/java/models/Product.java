@@ -1,7 +1,6 @@
 package models;
 
 import generics.GenericEntity;
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,6 +14,7 @@ import java.util.Objects;
  *
  * @author dougl
  */
+
 @Entity
 @Table(name = "product")
 public class Product extends GenericEntity{
@@ -24,22 +24,16 @@ public class Product extends GenericEntity{
     @GeneratedValue(generator = "seq_product", strategy = GenerationType.SEQUENCE)
     private Long idProduct;
     
-    @Column(nullable = false)
     private int code;
     
-    @Column(nullable = false)
     private String name;
     
-    @Column(nullable = true)
     private String description;
     
-    @Column(nullable = false)
     private int amount;
     
-    @Column(nullable = false)
     private BigDecimal purchasePrice;
-    
-    @Column(nullable = false)
+         
     private BigDecimal salePrice;
 
     public Product() {

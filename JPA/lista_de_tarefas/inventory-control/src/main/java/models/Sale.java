@@ -2,7 +2,6 @@ package models;
 
 import generics.GenericEntity;
 import jakarta.persistence.CascadeType;
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -19,26 +18,23 @@ import java.util.Objects;
  *
  * @author dougl
  */
-
+//
 @Entity
 @Table(name = "sale")
 public class Sale extends GenericEntity {
+    
     @Id
     @SequenceGenerator(sequenceName = "seq_sale", name = "seq_sale")
     @GeneratedValue(generator = "seq_sale", strategy = GenerationType.SEQUENCE)
     private Long idSale;
     
-    @Column(nullable = true)
     @OneToOne(cascade = CascadeType.ALL)
     private Client cliente;
     
-    @Column(nullable = true)
     private String description;
     
-    @Column(nullable = false)
     private BigDecimal totalPrice;
     
-    @Column(nullable = false)
     @OneToMany(cascade = CascadeType.ALL)
     private List<SaleItems> products;
 

@@ -14,30 +14,30 @@ import java.util.Objects;
  *
  * @author dougl
  */
-
 @Entity
 @Table(name = "address")
 public class Address extends GenericEntity {
+
     @Id
     @SequenceGenerator(sequenceName = "seq_address", name = "seq_address")
     @GeneratedValue(generator = "seq_address", strategy = GenerationType.SEQUENCE)
     private Long idAddress;
-    
+
     @Column(nullable = false)
     private String street;
-    
+
     @Column(nullable = false)
     private String city;
-    
+
     @Column(nullable = false)
     private String stateInfo;
-    
+
     @Column(nullable = false)
     private int zipCode;
 
     public Address() {
     }
-    
+
     public Long getIdAddress() {
         return idAddress;
     }
@@ -115,5 +115,5 @@ public class Address extends GenericEntity {
         }
         return Objects.equals(this.idAddress, other.idAddress);
     }
-    
+
 }

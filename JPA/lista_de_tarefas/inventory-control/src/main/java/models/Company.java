@@ -2,7 +2,6 @@ package models;
 
 import generics.GenericEntity;
 import jakarta.persistence.CascadeType;
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -25,18 +24,14 @@ public class Company extends GenericEntity {
     @GeneratedValue(generator = "seq_company", strategy = GenerationType.SEQUENCE)
     private Long idCompany;
     
-    @Column(nullable = false)
     private String name;
-    @Column(nullable = false)
-    
+
     private int cnpj;
-    @OneToOne(cascade = CascadeType.ALL)
     
-    @Column(nullable = false)
+    @OneToOne(cascade = CascadeType.ALL)
     private Address address;
     
     @OneToOne(cascade = CascadeType.ALL)
-    @Column(nullable = false)
     private Contact contact;
 
     public Company() {

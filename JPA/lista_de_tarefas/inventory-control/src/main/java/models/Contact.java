@@ -1,36 +1,29 @@
 package models;
 
 import generics.GenericEntity;
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
-import java.util.ArrayList;
 import java.util.Objects;
 
 /**
  *
  * @author dougl
  */
-
 @Entity
 @Table(name = "contact")
 public class Contact extends GenericEntity {
+
     @Id
     @SequenceGenerator(sequenceName = "seq_contact", name = "seq_contact")
     @GeneratedValue(generator = "seq_contact", strategy = GenerationType.SEQUENCE)
     private Long IdContact;
-    
-    @OneToMany(cascade = CascadeType.ALL)
-    @Column(nullable = false)
-    private ArrayList<Integer> number;
-    
-    @Column(nullable = false)
+
+    private String number;
+
     private String email;
 
     public Contact() {
@@ -44,11 +37,11 @@ public class Contact extends GenericEntity {
         this.IdContact = IdContact;
     }
 
-    public ArrayList<Integer> getNumber() {
+    public String getNumber() {
         return number;
     }
 
-    public void setNumber(ArrayList<Integer> number) {
+    public void setNumber(String number) {
         this.number = number;
     }
 
@@ -89,5 +82,5 @@ public class Contact extends GenericEntity {
         }
         return Objects.equals(this.number, other.number);
     }
-    
+
 }
