@@ -1,0 +1,81 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #5D3FCC;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10% auto;
+    max-width: 40%;
+    padding: 3% 3%;
+}
+
+section {
+    background-color: white;
+    padding: 2%;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.582);
+    border-radius: 5px;
+    width: 90%;
+}
+
+button {
+    background-color: #5D3FCC;
+    margin: 10px 0;
+    color: white;
+    border-radius: 5px;
+    height: 25px;
+    border-style: none;
+    border-color: rgba(128, 128, 128, 0.151);
+    border-width: 0.15em; 
+    box-shadow: 1px 1px  1px grey;
+    transition: 0.4s;
+}
+
+button:hover {
+    background-color: orange;
+}
+
+input {
+    margin: 10px 0;
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    padding: 0 5px;
+    border-style: solid;
+    border-color: rgba(128, 128, 128, 0.342);
+    border-width: 0.15em; 
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    display: flex;
+    justify-content: center;
+    color: orange;
+    font-size: 40px;
+}
+
+.mathButton {
+    width: 50%;
+    margin: 0 1px;
+}
+
+#buttonArea {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#submitButton {
+    width: 100%;
+}

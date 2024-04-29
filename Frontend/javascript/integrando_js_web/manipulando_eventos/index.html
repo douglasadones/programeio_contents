@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando Eventos</title>
+</head>
+<body id="main-body">
+
+    <h1 onclick="alert('Surpresa!')">Clique aqui e tenha uma surpresa!</h1>
+
+    <h2 onclick="this.innerText = 'Surpresa!'">Clique aqui e tenha outra surpresa!</h2>
+
+    <h3 onclick="document.getElementById('description').innerText = 'Uma outra surpresa!!'">Que tal outra surpresa?</h3>
+
+    <p id="description"></p>
+
+    <button id="action-button">
+        Clique em mim!
+    </button>
+
+    <input id="name-input" type="text" placeholder="Informe seu nome">
+
+    <p id="error-message"></p>
+
+    <script>
+
+        const actionButton = document.getElementById('action-button');
+
+        const mainBody = document.getElementById('main-body');
+
+        const nameInput = document.getElementById('name-input');
+
+        const errorMessage = document.getElementById('error-message');
+
+        errorMessage.style.color = 'red';
+        errorMessage.style.fontWeight = 'bold';
+
+        actionButton.addEventListener('click', function() {
+            alert('Olá Mundo!');
+        });
+
+        actionButton.addEventListener('mouseover', function() {
+            this.style.color = 'red';
+            mainBody.style.backgroundColor = 'grey';
+        });
+
+        actionButton.addEventListener('mouseout', function() {
+            this.style.color = 'black';
+            mainBody.style.backgroundColor = 'white';
+        });
+
+        nameInput.addEventListener('change', function() {
+            if (nameInput.value.length > 0 ) {
+                nameInput.style.borderColor = 'green';
+                errorMessage.innerText = '';
+            } else {
+                nameInput.style.borderColor = 'red';
+                errorMessage.innerText = 'Erro - Campo obrigatório';
+            }
+        })
+
+    </script>
+</body>
+</html>

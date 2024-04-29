@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterando Atributos</title>
+</head>
+<body>
+    
+    <h1 id="title">Meu Formulário</h1>
+
+    <input id="name" type="text" value="Douglas Adones">
+
+    <input id="email" type="text" value="" placeholder="E-mail">
+
+
+    <script>
+
+        document.getElementById('name').value = 'Alterado via JS!';
+
+        document.getElementById('email').value = 'Alterado aqui tambem via js';
+
+        document.getElementById('title').style.color = 'red';
+
+        const email = document.getElementById('email');
+
+        if (email.value === '') {
+            email.style.borderColor = 'red';
+        } else {
+            email.style.borderColor = 'green';
+        }
+
+    </script>
+
+</body>
+</html>
