@@ -1,0 +1,22 @@
+body {
+    background-color: #444;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+img {
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+    /* from {
+
+    }  */
+    to {
+
+    }
+}
+
